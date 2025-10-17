@@ -1,6 +1,16 @@
-/*:root {
-    --fonte1: ;
-}*/
+@charset "utf-8";
+@font-face {
+    font-family: moderno;
+    src: url(pacote-d012/fontes/BBHSansHegarty-Regular.ttf);
+
+    font-family: handwrite;
+    src: url(pacote-d012/fontes/Quintessential-Regular.ttf);
+}
+
+:root {
+    --fonte1: moderno, Arial, sans-serif;
+    --fonte2: handwrite, arial, sans-serif;
+}
 
 * {
     margin: 0;
@@ -8,15 +18,23 @@
     font-size: 1em;
 }
 
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte2);
+}
+
 header {
     background-color: black;
     color: white;
     text-align: center;
     padding: 60px;
+    font-family: var(--fonte1);
 }
 
 h1 {
     font-size: 8vw;
+    /*vw vai medir em relação a largura da tela*/
 }
 
 a {
@@ -30,7 +48,7 @@ a:hover {
 }
 
 section {
-    padding: 60px 10px 60px 10px;
+    padding: 10vh 0px 10vh 30px;
     font-variant: small-caps;
     font-size: 3.5vw;
     line-height: 1.7em;
@@ -63,9 +81,14 @@ section > p {
     background-image: url('pacote-d012/imagens/background002.jpg');
 }
 
+.normal {
+    background-color: white;
+}
+
 footer {
     background-color: black;
     text-align: center;
     color: white;
     padding: 10px;
+    font-family: var(--fonte1);
 }
